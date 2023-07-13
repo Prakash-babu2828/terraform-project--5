@@ -1,5 +1,5 @@
 resource "aws_elb" "bar" {
-  name               = "awselb1809"
+  name               = "awselb898989"
   availability_zones = ["us-east-1a", "ap-south-1b"]
 
   listener {
