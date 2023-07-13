@@ -101,7 +101,7 @@ name = each.value
 variable "user_names" {
 description = "*"
 type = set(string)
-default = ["p1", "p2", "p3", "p4"]
+default = ["ps1", "ps2", "ps3", "ps4"]
 }
 
 resource "aws_ebs_volume" "eight" {
