@@ -8,7 +8,7 @@ secret_key = ""
 resource "aws_instance" "one" {
   ami             = "ami-04823729c75214919"
   instance_type   = "t2.micro"
-  key_name        = "NT RAMARAO"
+  key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1a"
   user_data       = <<EOF
@@ -27,7 +27,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-04823729c75214919"
   instance_type   = "t2.micro"
-  key_name        = "NT RAMARAO"
+  key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1b"
   user_data       = <<EOF
@@ -46,7 +46,7 @@ EOF
 resource "aws_instance" "three" {
   ami             = "ami-04823729c75214919"
   instance_type   = "t2.micro"
-  key_name        = "NT RAMARAO"
+  key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1a"
   tags = {
@@ -57,7 +57,7 @@ resource "aws_instance" "three" {
 resource "aws_instance" "four" {
   ami             = "ami-04823729c75214919"
   instance_type   = "t2.micro"
-  key_name        = "NT RAMARAO"
+  key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1b"
   tags = {
@@ -90,7 +90,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "prakash05021973"
+  bucket = "prakash050219731"
 }
 
 resource "aws_iam_user" "seven" {
