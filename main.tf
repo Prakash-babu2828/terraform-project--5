@@ -66,7 +66,7 @@ resource "aws_instance" "four" {
 }
 
 resource "aws_security_group" "five" {
-  name = "awselb-112233"
+  name = "awselb-998877"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -90,7 +90,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "prakash789658"
+  bucket = "prakash558877"
 }
 
 resource "aws_iam_user" "seven" {
@@ -101,7 +101,7 @@ name = each.value
 variable "user_names" {
 description = "*"
 type = set(string)
-default = ["pb1", "pb2", "pb3", "pb4"]
+default = ["p1", "p2", "p3", "p4"]
 }
 
 resource "aws_ebs_volume" "eight" {
