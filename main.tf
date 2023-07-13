@@ -1,6 +1,6 @@
 #this file consists of code for instances and sg
 provider "aws" {
-region = "ap-south-1"
+region = "us-east-1"
 access_key = "AKIAV6YQCX2MH7RPHNIR"
 secret_key = "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"
 }
@@ -10,7 +10,7 @@ resource "aws_instance" "one" {
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1a"
+  availability_zone = "us-east-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -29,7 +29,7 @@ resource "aws_instance" "two" {
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1b"
+  availability_zone = "us-east-1b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -48,7 +48,7 @@ resource "aws_instance" "three" {
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1a"
+  availability_zone = "us-east-1a"
   tags = {
     Name = "app-server-1"
   }
@@ -59,7 +59,7 @@ resource "aws_instance" "four" {
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1b"
+  availability_zone = "us-east-1b"
   tags = {
     Name = "app-server-2"
   }
@@ -90,7 +90,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "prakash6633991809"
+  bucket = "prakash143341"
 }
 
 resource "aws_iam_user" "seven" {
