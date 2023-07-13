@@ -1,16 +1,16 @@
 #this file consists of code for instances and sg
 provider "aws" {
-region = "us-east-1"
+region = "ap-south-1"
 access_key = "AKIAV6YQCX2MH7RPHNIR"
 secret_key = "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"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-04823729c75214919"
+  ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1a"
+  availability_zone = "ap-south-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -25,11 +25,11 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-04823729c75214919"
+  ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1b"
+  availability_zone = "ap-south-1b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -44,29 +44,29 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-04823729c75214919"
+  ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1a"
+  availability_zone = "ap-south-1a"
   tags = {
     Name = "app-server-1"
   }
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-04823729c75214919"
+  ami             = "ami-006935d9a6773e4ec"
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1b"
+  availability_zone = "ap-south-1b"
   tags = {
     Name = "app-server-2"
   }
 }
 
 resource "aws_security_group" "five" {
-  name = "elb-sg"
+  name = "awselb-sg1809"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -90,7 +90,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "prakash115599"
+  bucket = "prakash6633991809"
 }
 
 resource "aws_iam_user" "seven" {
@@ -101,13 +101,13 @@ name = each.value
 variable "user_names" {
 description = "*"
 type = set(string)
-default = ["user1", "user2", "user3", "user4"]
+default = ["pb1", "pb2", "pb3", "pb4"]
 }
 
 resource "aws_ebs_volume" "eight" {
  availability_zone = "us-east-1a"
   size = 40
   tags = {
-    Name = "ebs-001"
+    Name = "awsebs1809"
   }
 }
