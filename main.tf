@@ -66,7 +66,7 @@ resource "aws_instance" "four" {
 }
 
 resource "aws_security_group" "five" {
-  name = "awselb-778899"
+  name = "awselb-112233"
   ingress {
     from_port   = 22
     to_port     = 22
