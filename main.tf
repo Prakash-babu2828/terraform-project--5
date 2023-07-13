@@ -6,7 +6,7 @@ secret_key = "x+iIoM5SnMguY1L76RFTRYzD6UtXGf5pOyGLbooG"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-006935d9a6773e4ec"
+  ami             = "ami-04823729c75214919"
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -25,7 +25,7 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-006935d9a6773e4ec"
+  ami             = "ami-04823729c75214919"
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -44,7 +44,7 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-006935d9a6773e4ec"
+  ami             = "ami-04823729c75214919"
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -55,7 +55,7 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-006935d9a6773e4ec"
+  ami             = "ami-04823729c75214919"
   instance_type   = "t2.micro"
   key_name        = "eeeeee"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -66,7 +66,7 @@ resource "aws_instance" "four" {
 }
 
 resource "aws_security_group" "five" {
-  name = "awselb-sg1809"
+  name = "awselb-778899"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -90,7 +90,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "prakash143341"
+  bucket = "prakash789658"
 }
 
 resource "aws_iam_user" "seven" {
