@@ -1,8 +1,8 @@
 #this file consists of code for instances and sg
 provider "aws" {
 region = "us-east-1"
-access_key = ""
-secret_key = ""
+access_key = "AKIAV6YQCX2MI5XB4LFQ"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
@@ -66,7 +66,7 @@ resource "aws_instance" "four" {
 }
 
 resource "aws_security_group" "five" {
-  name = "awselb-005577"
+  name = "awselb-332299"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -108,6 +108,6 @@ resource "aws_ebs_volume" "eight" {
  availability_zone = "us-east-1a"
   size = 40
   tags = {
-    Name = "awsebs1809"
+    Name = "awsebs7659999"
   }
 }
