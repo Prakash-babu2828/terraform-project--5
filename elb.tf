@@ -1,6 +1,6 @@
 resource "aws_elb" "bar" {
   name               = "awselb898989"
-  availability_zones = ["us-east-1a", "ap-south-1b"]
+  availability_zones = ["us-east-1a", "us-east-1b"]
 
   listener {
     instance_port     = 80
